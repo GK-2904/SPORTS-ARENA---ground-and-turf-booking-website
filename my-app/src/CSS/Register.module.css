@@ -1,0 +1,35 @@
+/* Register.module.css */
+
+.auth-container { width: 600px; margin: 70px auto; padding: 30px; border-radius: 20px; background: linear-gradient(180deg, #0f3b13, #08230c); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); text-align: center; font-family: "Poppins", sans-serif; color: #fff; animation: fadeIn 1s ease-in-out; height: 450px; border: 1px solid rgba(255,255,255,0.06); }
+
+.auth-container h2 { margin-bottom: 20px; font-size: 28px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; color: #e7ffe6; text-shadow: 0 6px 24px rgba(0,0,0,0.6); }
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-container input { padding: 12px; border: none; border-radius: 999px; outline: none; font-size: 16px; text-align: center; background: #07140a; color: #eaffea; transition: all 0.3s ease; margin-top: 10px; border: 1px solid rgba(255,255,255,0.08); }
+
+.auth-container input:focus { background: #0b1a0e; box-shadow: 0 0 12px rgba(0, 230, 118, 0.25); transform: scale(1.03); border-color: #00e676; }
+
+.auth-container button { padding: 12px; border: none; border-radius: 999px; background: linear-gradient(135deg, #00c853, #00e676); color: #041b06; font-size: 18px; font-weight: 900; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 8px 24px rgba(0, 200, 83, 0.35); margin-top: 25px; }
+
+.auth-container button:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+.auth-container p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #f9fafb;
+}
+
+.auth-container a { color: #00e676; font-weight: bold; text-decoration: none; transition: color 0.3s ease; }
+
+.auth-container a:hover { color: #66f3aa; text-decoration: underline; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

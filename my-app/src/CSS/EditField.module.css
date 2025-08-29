@@ -1,0 +1,82 @@
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #e9fbe9, #f0fff4);
+  border: 2px solid #28a745;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 128, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #155724;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels */
+.label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0c3d14;
+  display: block;
+}
+
+/* Input Fields */
+.input, .select {
+  padding: 12px;
+  border: 1.8px solid #28a745;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus, .select:focus {
+  border-color: #155724;
+  box-shadow: 0 0 8px rgba(21, 87, 36, 0.4);
+}
+
+/* Button */
+.button {
+  background: #28a745;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* Optional Cricket Icon at Top */
+.container::before {
+  content: "🏏";
+  font-size: 40px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}

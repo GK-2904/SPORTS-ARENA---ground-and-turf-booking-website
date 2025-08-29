@@ -1,0 +1,66 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0e1411, #1a221d);
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #e6efe9;
+  text-align: center;
+}
+
+.heading { font-size: 2rem; font-weight: 800; color: #c7f9cc; margin-bottom: 12px; }
+.detailsCard { max-width: 960px; margin: 0 auto; background: rgba(16, 26, 21, .85); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 18px; box-shadow: 0 12px 34px rgba(0,0,0,.35); }
+
+.calendarWrapper { display: inline-block; background: #101a15; padding: 20px; border-radius: 15px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); margin-top: 16px; }
+
+/* React Calendar Styling */
+.react-calendar {
+  border: none;
+  background: #101a15;
+  color: #e6efe9;
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+  width: 350px;
+}
+
+.react-calendar__navigation button {
+  color: #e6efe9;
+  min-width: 44px;
+  background: linear-gradient(135deg, #c7f9cc, #b7e4c7);
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  margin: 2px;
+  transition: all 0.3s ease;
+}
+
+.react-calendar__navigation button:hover { background: linear-gradient(135deg, #b7e4c7, #95d5b2); }
+
+.react-calendar__month-view__weekdays { text-align: center; font-weight: 600; color: #cfe8d7; }
+
+.react-calendar__tile { background: #101a15; color: #e6efe9; border-radius: 50%; height: 50px; width: 50px; line-height: 50px; transition: all 0.3s ease; }
+
+.react-calendar__tile:hover:not(.react-calendar__tile--disabled) { background: linear-gradient(135deg, #c7f9cc, #b7e4c7); color: #0f1c14; transform: scale(1.08); }
+
+.react-calendar__tile--active { background: linear-gradient(135deg, #b7e4c7, #95d5b2); color: #0f1c14; }
+
+/* Booked Dates */
+.bookedDate {
+  background-color: #ef4444 !important; /* red */
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 50%;
+  cursor: not-allowed;
+}
+
+/* Available Dates */
+.availableDate { background-color: #101a15; border: 2px solid #b7e4c7; color: #b7e4c7; font-weight: 700; border-radius: 50%; transition: all 0.3s ease; }
+
+.availableDate:hover { background: linear-gradient(135deg, #c7f9cc, #b7e4c7); color: #0f1c14; transform: scale(1.08); border: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .react-calendar {
+    width: 90%;
+  }
+}

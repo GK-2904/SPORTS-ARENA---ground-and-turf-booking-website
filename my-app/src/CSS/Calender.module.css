@@ -1,0 +1,205 @@
+.calendarWrapper {
+  padding: 25px;
+  background: linear-gradient(180deg, #0b1020, #0f1629);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  color: #eaf7ff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.calendarWrapper:hover {
+  transform: scale(1.01);
+}
+
+/* Calendar header (month name, arrows) */
+.fc-toolbar {
+  color: #eaf7ff !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.fc-toolbar-title {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.fc-button {
+  background: #00c2a8 !important;
+  border: none !important;
+  color: #0b1020 !important;
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+  font-weight: 600;
+}
+
+.fc-button:hover {
+  background: #00b09a !important;
+  color: #07101f !important;
+}
+
+/* Button states */
+.fc-button:active {
+  transform: translateY(1px);
+}
+.fc-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* Calendar grid */
+.fc-theme-standard td, 
+.fc-theme-standard th {
+  border: 1px solid #1b2540 !important;
+}
+
+.fc-daygrid-day {
+  background: #0e1630;
+  color: #eaf7ff;
+  transition: background 0.2s ease-in-out;
+}
+
+.fc-daygrid-day:hover {
+  background: #0b2a2a;
+  cursor: pointer;
+}
+
+/* Day numbers */
+.fc-daygrid-day-top .fc-daygrid-day-number {
+  color: #9ef7ec;
+  font-weight: 700;
+}
+
+/* Header cells */
+.fc-col-header-cell {
+  background: linear-gradient(180deg, rgba(36, 48, 122, 0.6), rgba(16, 22, 50, 0.6));
+  color: #c7d7ff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+/* Weekends accent */
+.fc-day-sat, .fc-day-sun {
+  background: #0a1224;
+}
+
+/* Booked event styling (red glowing) */
+.fc-event {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 2px 4px;
+  background: #ef4444 !important;
+  color: #fff !important;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.8);
+}
+
+.fc-event:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+/* Available background styling (green tint) */
+.fc .fc-bg-event {
+  opacity: 0.22 !important;
+  border-radius: 6px;
+  background: #00c2a8 !important;
+}
+
+/* Current day highlight */
+.fc-day-today {
+  background: rgba(255, 176, 32, 0.1) !important;
+  border: 2px solid #ffb020 !important;
+}
+
+/* Past days dimming */
+.fc-daygrid-day.fc-day-past {
+  filter: grayscale(0.1);
+  opacity: 0.85;
+}
+
+/* Popovers (for more events) */
+.fc-popover {
+  background: #0c1224 !important;
+  color: #eaf7ff !important;
+  border: 1px solid #1b2540 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+}
+.fc-popover-header {
+  background: #1a2454 !important;
+  color: #c7d7ff !important;
+}
+
+/* Scrollers */
+.fc .fc-scroller, .fc .fc-timegrid-body {
+  scrollbar-width: thin;
+  scrollbar-color: #00c2a8 rgba(0,0,0,0.2);
+}
+.fc .fc-scroller::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.fc .fc-scroller::-webkit-scrollbar-thumb {
+  background: #00c2a8;
+  border-radius: 6px;
+}
+
+/* Selection highlight (if enabled) */
+.fc .fc-highlight {
+  background: rgba(34, 197, 94, 0.25);
+}
+
+/* TimeGrid (weekly/day views) */
+.fc-timegrid-slot-label {
+  color: #a8d8ff;
+}
+.fc-timegrid-slot {
+  border-color: #1b2540 !important;
+}
+.fc-timegrid-axis-cushion {
+  color: #c7d7ff;
+}
+.fc-timegrid-event {
+  background: linear-gradient(180deg, #ef4444, #b91c1c) !important;
+  border: none !important;
+}
+
+/* Subtle grid pattern */
+.calendarWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 14px;
+  background-image: radial-gradient(rgba(0, 194, 168, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Make wrapper a positioning context */
+.calendarWrapper { position: relative; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .fc-toolbar {
+    font-size: 1rem;
+  }
+  .fc-button {
+    padding: 6px 10px !important;
+    font-size: 0.9rem;
+  }
+  .fc-daygrid-day-top .fc-daygrid-day-number {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fc-toolbar {
+    flex-wrap: wrap !important;
+    gap: 6px;
+  }
+  .fc-col-header-cell-cushion {
+    font-size: 0.75rem;
+  }
+  .fc-daygrid-day-top .fc-daygrid-day-number {
+    font-size: 0.9rem;
+  }
+}

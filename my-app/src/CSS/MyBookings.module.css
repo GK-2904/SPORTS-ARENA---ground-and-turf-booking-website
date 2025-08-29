@@ -1,0 +1,47 @@
+/* Container */
+.container { padding: 32px 16px 48px 16px; background: #0e1411; min-height: 100vh; font-family: "Segoe UI", sans-serif; }
+
+/* Title */
+.title { font-size: 28px; font-weight: 900; color: #e6efe9; text-align: center; margin-bottom: 22px; border-bottom: 3px solid #b7e4c7; padding-bottom: 10px; letter-spacing: 1px; }
+
+/* Grid of bookings */
+.bookingsGrid { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+
+/* Booking Card */
+.card { width: 300px; background: linear-gradient(180deg, #101a15, #0e1713); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.28); transition: transform 0.25s ease, box-shadow 0.25s ease; position: relative; color: #e6efe9; }
+
+/* Card Hover Effect */
+.card:hover { transform: translateY(-6px); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.36); }
+
+/* Field Name */
+.card h3 { font-size: 18px; font-weight: 900; color: #edf6f0; margin-bottom: 12px; text-align: center; border-bottom: 2px dashed #b7e4c7; padding-bottom: 8px; }
+
+/* Info (styled like cricket commentary lines) */
+.card p { margin: 8px 0; font-size: 14px; color: #d6e6dc; padding-left: 8px; border-left: 3px solid #b7e4c7; border-radius: 5px; }
+
+/* Icons for extra cricket feel */
+.card p:nth-child(2)::before {
+  content: "📍 ";
+}
+.card p:nth-child(3)::before {
+  content: "🏟️ ";
+}
+.card p:nth-child(4)::before {
+  content: "📅 ";
+}
+.card p:nth-child(5)::before {
+  content: "⏰ ";
+}
+.card p:nth-child(6)::before {
+  content: "💳 ";
+}
+.card p:nth-child(7)::before {
+  content: "💰 ";
+}
+
+/* Payment Status highlight */
+.paid { color: #95d5b2; font-weight: 900; }
+.pending { color: #ff6b6b; font-weight: 900; }
+
+/* Empty Message */
+.empty { text-align: center; font-size: 18px; margin-top: 50px; color: #c7d9cc; font-style: italic; }

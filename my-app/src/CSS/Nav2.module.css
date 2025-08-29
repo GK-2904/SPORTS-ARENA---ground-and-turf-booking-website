@@ -1,0 +1,97 @@
+/* Nav2.module.css */
+
+.header { position: sticky; top: 0; z-index: 1000; }
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(90deg, #0c1711, #0f1c14);
+  padding: 10px 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  height: 100px;
+}
+
+/* Logo */
+.left { display: flex; align-items: center; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 8px; }
+.brandIcon { font-size: 28px; filter: drop-shadow(0 2px 6px rgba(0,0,0,.4)); }
+.brandText { font-weight: 900; font-size: 22px; letter-spacing: .5px; color: #e6efe9; text-transform: uppercase;  position: relative; left: 50px;}
+.center { flex: 1; display: none; padding: 0 12px; }
+
+.logo:hover { transform: scale(1.06); }
+
+/* Left section (main links) */
+.burger {
+  width: 36px; height: 36px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  border: 1px solid rgba(255,255,255,0.2); background: transparent; border-radius: 8px; color: #fff;
+}
+.burger span { width: 18px; height: 2px; background: #fff; }
+
+/* Right section (login/register buttons) */
+.links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: rgba(14, 18, 15, 0.96); padding: 12px 18px 16px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.open { display: flex; }
+
+/* Nav links */
+.navLink { color: #eaf5ec; text-decoration: none; font-size: 1.05rem; font-weight: 600; position: relative; transition: color 0.2s ease; padding: 10px 8px; border-radius: 8px; }
+
+.navLink:hover { color: #b7e4c7; background: rgba(183, 228, 199, 0.12); }
+
+.activeLink { color: #b7e4c7; font-weight: 700; }
+
+/* Optional underline effect */
+.navLink::after { content: ''; display: block; width: 0; height: 3px; background: #b7e4c7; transition: width 0.3s; position: absolute; bottom: -5px; left: 0; }
+
+.navLink:hover::after,
+.activeLink::after {
+  width: 100%;
+}
+
+/* Buttons for login/register */
+.buttonLink { padding: 8px 16px; border-radius: 8px; background-color: #b7e4c7; color: #0c1711; font-weight: 800; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+
+.buttonLink:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* User info and logout styles */
+.userInfo {
+  color: #b7e4c7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: rgba(183, 228, 199, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(183, 228, 199, 0.2);
+  text-align: center;
+}
+
+.logoutBtn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #dc3545;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.logoutBtn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .burger { display: none; }
+  .center { display: block; }
+  .links { position: static; display: flex; flex-direction: row; gap: 8px; background: transparent; padding: 0; border: none; }
+  
+  .userInfo {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  .logoutBtn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+}
